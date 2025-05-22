@@ -5,7 +5,8 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import ProductCard from  "./../../Components/Product/ProductCard"
-import { productUrl } from "./../../API/endPoints.js"
+// import { productUrl } from "./../../API/endPoints.js"
+import { productUrl } from "../../API/endPoints.js";
 
 function Results() {
   const [results, setResults] = useState([]);
