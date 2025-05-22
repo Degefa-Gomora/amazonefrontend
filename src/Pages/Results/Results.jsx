@@ -5,7 +5,10 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import ProductCard from  "./../../Components/Product/ProductCard"
+<<<<<<< HEAD
 // import { productUrl } from "./../../API/endPoints.js"
+=======
+>>>>>>> f4587a4 (final commit after deploy)
 import { productUrl } from "../../Api/endPoints.js";
 
 function Results() {
