@@ -7,7 +7,7 @@ import { productUrl } from "./../../API/EndPoints.js"
 import ProductCard from  "./../../Components/Product/ProductCard"
 import { useEffect, useState } from 'react'
 import Loader from '../../Components/Loader/Loader.jsx'
-import {endPoints} from "../../../src/Api/endPoints.js"
+import {endPoints} from "../../Api/endPoints.js"
 
 
 function ProductDetail() {
