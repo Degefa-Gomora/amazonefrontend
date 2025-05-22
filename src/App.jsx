@@ -1,6 +1,4 @@
 import { useContext, useEffect, useState } from 'react'
-import './App.css'
-// import Header from './Components/Header/Header'
 import Routing from './Routing.jsx'
 import { DataContext } from './Components/DataProvider/DataProvider.jsx'
 import { Type } from './Utility/action.type.js'
