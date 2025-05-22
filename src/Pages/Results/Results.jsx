@@ -4,7 +4,7 @@ import LayOut from './../../Components/LayOut/LayOut'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import {productUrl} from  "./../../API/EndPoints.js"
+import {productUrl} from  "./../../API/endPoints.js"
 import ProductCard from  "./../../Components/Product/ProductCard"
 function Results() {
   const [results, setResults] = useState([]);
