@@ -6,6 +6,8 @@ import axios from 'axios'
 import ProductCard from  "./../../Components/Product/ProductCard"
 import { useEffect, useState } from 'react'
 import Loader from '../../Components/Loader/Loader.jsx'
+import {productUrl}from  "../../Api/endPoints.js"
+
 
 
 function ProductDetail() {
