@@ -1,5 +1,5 @@
 
-// DataProvider.jsx
+// Global state 
 import { createContext, useReducer } from "react";
 
 export const DataContext = createContext();

@@ -1,6 +1,4 @@
 
-
-
 import { Type } from "./action.type";
 
 export const initialState = {
@@ -9,6 +7,7 @@ export const initialState = {
 };
 
 export const reducer = (state, action) => {
+  // console.log(action)//contain type property
   switch (action.type) {
     case Type.ADD_TO_BASKET:
       const existingItem = state.basket.find(

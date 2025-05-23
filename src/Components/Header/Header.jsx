@@ -10,13 +10,10 @@ import { DataContext } from '../DataProvider/DataProvider.jsx';
 import {auth} from "../../Utility/firebase.js"
 
 function Header() {
-  // const { user, basket, dispatch } = useContext(DataContext);
-
   const { state,dispatch } = useContext(DataContext);
   const { user, basket } = state;
-  const cartCount = basket?.length || 0;
-  const totalItem = basket?.reduce((amount, item) => amount + item.amount, 0);
   const totalItems = basket?.reduce((sum, item) => sum + item.amount, 0);
+  
   return (
     <section className={classes.fixed_header}>
       <section>
