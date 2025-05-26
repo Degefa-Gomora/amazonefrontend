@@ -9,6 +9,6 @@ import img8 from "./img8.jpg";
 import img9 from "./img9.jpg";
 import img10 from "./img10.jpg";
 
-const img = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+const imgList = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 export default img;

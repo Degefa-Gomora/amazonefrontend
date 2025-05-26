@@ -1,29 +1,41 @@
+// Importing React to create the component
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import img from "./img/data.js"; // Now using default import
-import "./Carousel.module.css"; // Import your CSS file for styling
 
+// Importing Carousel component from the react-responsive-carousel library
+import { Carousel } from "react-responsive-carousel";
+
+// Importing default Carousel styles (required for proper appearance)
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+// Importing a list of image URLs from a local data file
+import imgList from "./img/data.js"; // Default import – you can name it anything
+
+// Importing custom styles for this component (optional usage)
+import "./Carousel.module.css";
+
+// Functional component that renders an image carousel
 function MyCarousel() {
   return (
+    // Container div for the carousel, useful for custom layout or styling
     <div className="carousel-wrapper">
       <Carousel
-        autoPlay={true}
-        infiniteLoop={true}
-        showStatus={false}
-        showIndicators={false}
-        showThumbs={false}
-        interval={3000} 
+        autoPlay={true} // Automatically scrolls through images
+        infiniteLoop={true} // Loops back to the start when it reaches the end
+        showStatus={true} // Shows slide number/status
+        showIndicators={false} // Hides the indicator dots
+        showThumbs={false} // Hides thumbnail previews
+        interval={3000} // Delay between slides in milliseconds (3 seconds)
       >
-        {img?.map((image, index) => (
+        {/* Mapping through the image list to display each image in the carousel */}
+        {imgList?.map((image, index) => (
           <div key={index}>
             <img
               src={image}
-              alt={`Slide ${index}`}
+              alt={`Slide ${index}`} // Descriptive alt text for accessibility
               style={{
-                maxHeight: "500px",
-                objectFit: "cover",
-                width: "100%",
+                maxHeight: "500px", // Limits image height
+                objectFit: "cover", // Ensures the image covers the space proportionally
+                width: "100%", // Makes image span full width
               }}
             />
           </div>
@@ -33,27 +45,37 @@ function MyCarousel() {
   );
 }
 
+// Exporting the component so it can be used elsewhere in the application
 export default MyCarousel;
 
 // import React from "react";
 // import { Carousel } from "react-responsive-carousel";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // Don't forget the styles
-// import img  from "./img/data.js"; // Adjust the path as necessary
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import imgList from "./img/data.js"; // default import, Name can be anything
+// import "./Carousel.module.css";
 
 // function MyCarousel() {
-//   // Renamed to avoid conflict with imported Carousel
 //   return (
-//     <div>
+//     <div className="carousel-wrapper">
 //       <Carousel
 //         autoPlay={true}
 //         infiniteLoop={true}
-//         showStatus={false}
+//         showStatus={true}
 //         showIndicators={false}
-//         showThumbs={false} // Changed to false since you probably don't want thumbs
+//         showThumbs={false}
+//         interval={3000}
 //       >
-//         {img.map((image, index) => (
+//         {imgList?.map((image, index) => (
 //           <div key={index}>
-//             <img src={image} alt={`Slide ${index}`} />
+//             <img
+//               src={image}
+//               alt={`Slide ${index}`}
+//               style={{
+//                 maxHeight: "500px",
+//                 objectFit: "cover",
+//                 width: "100%",
+//               }}
+//             />
 //           </div>
 //         ))}
 //       </Carousel>
@@ -62,27 +84,3 @@ export default MyCarousel;
 // }
 
 // export default MyCarousel;
-
-// // import React from 'react'
-// // import { Carousel } from "react-responsive-carousel";
-// // import {img} from "./img/data.js";
-
-// // function Carousel() {
-// //   return (
-// //     <div>
-// //         <Carousel
-// //         autoPlay={true}
-// //         infiniteLoop={true}
-// //         // showStatus={false}
-// //         showIndicators={false}
-// //         showThumbs={true}>
-// //             {img.map((image, index) => (
-// //                 <div key={index}>
-// //                     <img src={image} alt={`Slide ${index}`} />
-
-// //         </Carousel>
-// //     </div>
-// //   )
-// // }
-
-// // export default Carousel

@@ -7,7 +7,7 @@ import Cart from "./Pages/Cart/Cart";
 import Results from "./Pages/Results/Results";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 import Auth from "./Pages/Auth/Auth";
-import { CheckoutProvider, Elements } from "@stripe/react-stripe-js";
+import {Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { ProtectedRoute } from "./Components/protectedRoute/ProtectedRoute.jsx";
 
