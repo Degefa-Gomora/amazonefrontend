@@ -12,6 +12,7 @@ import imgList from "./img/data.js"; // Default import – you can name it anyth
 
 // Importing custom styles for this component (optional usage)
 import "./Carousel.module.css";
+import classes from "./Carousel.module.css"; // Importing CSS module for custom styles
 
 // Functional component that renders an image carousel
 function MyCarousel() {
@@ -41,6 +42,7 @@ function MyCarousel() {
           </div>
         ))}
       </Carousel>
+      <div className={classes.hero_img}></div>
     </div>
   );
 }
