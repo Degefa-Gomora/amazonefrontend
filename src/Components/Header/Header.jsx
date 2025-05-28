@@ -35,16 +35,17 @@ function Header() {
   // Calculating total number of items in the basket
   const totalItems = basket?.reduce((sum, item) => sum + item.amount, 0);
 
+  //to make first character of user name cappital 
+  const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
   return (
     // Main header wrapper with fixed position
     <section className={classes.fixed_header}>
       <section>
         {/* Top header container */}
         <div className={classes.header_container}>
-          
           {/* Left side: Logo and delivery location */}
           <div className={classes.logo_container}>
-            
             {/* Amazon logo with home link */}
             <Link to="/">
               <img
@@ -81,7 +82,6 @@ function Header() {
 
           {/* Right side: Language, Auth, Orders, and Cart */}
           <div className={classes.order_container}>
-            
             {/* Language selector with flag */}
             <div className={`${classes.language} ${classes.combined_hover}`}>
               <img
@@ -99,7 +99,8 @@ function Header() {
                 {user ? (
                   <>
                     {/* Greet logged-in user by name */}
-                    <p>Hello {user.email?.split("@")[0]}</p>
+                    {/* <p>Hello {user.email?.split("@")[0]}</p> */}
+                    <p>Hello {capitalize(user.email?.split("@")[0])}</p>
                     {/* Sign out button */}
                     <span onClick={() => auth.signOut()}>SignOut</span>
                   </>

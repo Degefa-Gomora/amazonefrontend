@@ -29,6 +29,7 @@ function Product() {
       .then((res) => {
         // On success, store product data into state
         setProducts(res.data);
+        console.log(res.data); // Log the fetched data for debugging
         setLoading(false); // Stop loading after data is fetched
       })
       .catch((err) => {
