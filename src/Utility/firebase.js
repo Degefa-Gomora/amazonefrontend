@@ -8,9 +8,9 @@ import { getFirestore } from "firebase/firestore";           // Provides access 
 // Firebase configuration using environment variables for security and flexibility
 // These variables are defined in your .env file and accessed via Vite's import.meta.env
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,                      // API key to identify your Firebase project
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,                      // API key to identify Firebase project
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,              // Domain used for Firebase Authentication
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,                // Unique ID of your Firebase project
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,                // Unique ID of the Firebase project
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,        // Cloud Storage bucket for storing files
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID, // ID for Firebase Cloud Messaging
   appId: import.meta.env.VITE_FIREBASE_APP_ID,                        // Unique ID for the web app

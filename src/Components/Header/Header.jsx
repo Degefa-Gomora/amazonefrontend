@@ -102,7 +102,7 @@ function Header() {
                     {/* <p>Hello {user.email?.split("@")[0]}</p> */}
                     <p>Hello {capitalize(user.email?.split("@")[0])}</p>
                     {/* Sign out button */}
-                    <span onClick={() => auth.signOut()}>SignOut</span>
+                    <span onClick={() => auth.signOut()}>Sign Out</span>
                   </>
                 ) : (
                   <>

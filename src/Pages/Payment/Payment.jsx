@@ -160,9 +160,7 @@ function Payment() {
             )}
           </div>
         </div>
-
         <hr />
-
         {/* Payment Method Section */}
         <div className={classes.flex}>
           <h3>Payment Method</h3>
@@ -205,7 +203,6 @@ function Payment() {
     </LayOut>
   );
 }
-
 // Export the Payment component
 export default Payment;
 
