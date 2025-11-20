@@ -85,7 +85,7 @@ function Header() {
             {/* Language selector with flag */}
             <div className={`${classes.language} ${classes.combined_hover}`}>
               <img
-                src="https://image.shutterstock.com/image-vector/usa-flag-icons-vector-set-260nw-2491312125.jpg"
+                src="/usa-flag.png"
                 alt="USA Flag"
               />
               <select name="" id="">
